@@ -128,13 +128,13 @@ def check_difference_in_DB_or_fridge(item, db_food, food_detected):
         if item == food:
             print(f"removing {item} from db")
             remove_food_from_database(item)
-            # send_push_message("ExponentPushToken[6OqKDEOxeNk-Rz2tJEm81w]", f"Removed {item} from the database")
+            send_push_message("ExponentPushToken[6OqKDEOxeNk-Rz2tJEm81w]", f"Removed {item} from the database")
             return
     for food in food_detected:
         if item == food:
             print(f"adding {item} to db")
             add_food_to_database(item)
-            # send_push_message("ExponentPushToken[6OqKDEOxeNk-Rz2tJEm81w]", f"Added {item} to the database")
+            send_push_message("ExponentPushToken[6OqKDEOxeNk-Rz2tJEm81w]", f"Added {item} to the database")
             return
 
 def update_db(food_detected):
@@ -163,4 +163,4 @@ def update_db(food_detected):
         #             db_food.remove(item)
         # print(db_food)
 # update_db(['apple', 'banana', 'orange'])
-update_db(['apple', 'Banana', 'egg', 'Cucumber', 'Butter', 'Orange', 'pineapple'])
+update_db(['apple','banana', 'Butter', 'cucumber', 'orange'])
